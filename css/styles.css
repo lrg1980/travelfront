@@ -1,6 +1,7 @@
 body {
      box-sizing: border-box;
      background-color: rgba(31, 194, 172, 0.589);
+     font-family: Arial;
 }
 
 .contenedor {
@@ -28,7 +29,70 @@ img {
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center center;
+     background-attachment: fixed;
 }
+
+.header {
+     display: flex;
+     position:relative;
+     flex-direction: column;
+     justify-content: center;
+}
+
+.barra {
+     position: absolute;
+     background-color: #008fd1;
+     width: 100%;
+     top: 1rem;
+     padding: 1rem 0;
+}
+
+.barra .contenedor {
+     display: flex;
+     flex-direction: column;
+}
+
+@media screen and (min-width: 768px){
+     .barra .contenedor {
+          flex-direction: row;
+          justify-content: space-between;
+     }
+}
+
+.logo,
+.navegacion {
+     text-align: center;
+}
+.navegacion ul {
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+}
+@media screen and (min-width: 768px){
+     .navegacion{
+          flex:0 0 28rem;
+     }
+     .navegacion ul {
+          flex-direction: row;
+          justify-content: space-between;
+     }
+}
+.navegacion ul li a {
+     color: white;
+     text-decoration: none;
+     text-transform: uppercase;
+}
+
+.logo-img {
+     max-width: 22rem;
+}
+.header h1 {
+     color: #008fd1;
+     max-width: 25rem;
+     font-size: 2.3rem;
+     text-transform: uppercase;
+}
+
 /* Contenido */
 
 @media screen and  (min-width: 480px) {
